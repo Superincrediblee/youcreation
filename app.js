@@ -81,6 +81,10 @@ app.get("/team",function(req,res){
 app.get("/services",function(req,res){
     res.render("services")
 })
+let port = process.env.PORT;
+if(port == null || port ==""){
+    port == 3000
+}
  app.listen(5000,function(){
     console.log("Server started on port 5000")
 }) 
