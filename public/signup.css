@@ -1,6 +1,5 @@
 .head{
     padding-top: 30px;
-    color: blue;
 }
 .form-floating{
     position: relative;
@@ -10,7 +9,7 @@
     top: calc(50%);
     left: 1.25rem;
 }
-.form-floating label, .form-floating.form-control{
+.form-floating label, .form-floating .form-control{
     left: .5rem;
     padding-left: 3.5rem;
 }

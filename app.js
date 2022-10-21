@@ -4,7 +4,7 @@ const _ = require("lodash")
 const ejs=require("ejs");
 const app= express();
 const mongoose =require("mongoose")
-mongoose.connect("mongodb://localhost:27017/peoplesDB",{useNewUrlParser:true})
+mongoose.connect("mongodb+srv://Elliotazzurri:england123@cluster0.reotwsp.mongodb.net/peoplesDB",{useNewUrlParser:true})
 var validateEmail = function(email) {
     var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     return re.test(email)
@@ -29,13 +29,6 @@ const peoplesSchema = ({
 
 })
 const People = mongoose.model("People", peoplesSchema )
-
-/* const peoples = new People({
-    name: "jo",
-    email: "q@gmail.com",
-    contact: 2222222
-})  */
- //peoples.save()
  app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended:true}));
@@ -56,27 +49,38 @@ app.get("/Signup",function(req,res){
 app.get("/success",function(req,res){
     res.render("success")
 })
+app.get("/failure", function(req,res){
+    res.render("failure")
+})
 app.post("/Signup",function(req,res){
    let username = req.body.user
    let email = req.body.address
    let number = req.body.contact 
-   const people = new People({
-    name:username,
-    email:email,
-    contact:number
-  })
-  people.save() 
-  res.redirect("success")
-})
+   People.findOne({email:email},function(err,Foundemail){
+    if(!err){
+        if(!Foundemail){
+             const people = new People({
+                name:username,
+                email:email,
+                contact:number
+              }) 
+               people.save() 
+                res.render("success")   
+               } else{
+             res.redirect("failure") 
 
+        }
+    }
+   })
+  
+})
 
 app.get("/team",function(req,res){
     res.render("team")
 })
 app.get("/services",function(req,res){
     res.render("services")
-}) 
-
+})
  app.listen(5000,function(){
     console.log("Server started on port 5000")
 }) 
