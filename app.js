@@ -82,9 +82,9 @@ app.get("/services",function(req,res){
     res.render("services")
 })
 let port = process.env.PORT;
-if(port == null || port ==""){
-    port == 5000
+if (port == null || port ==""){
+    port == 3000;
 }
  app.listen(port,function(){
-    console.log("Serverhas  started successful on port 5000")
+    console.log("Server has  started successful on port 5000")
 }) 
