@@ -11,7 +11,8 @@
 	<!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
-	<link href="/style.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+	<link href="signup.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/cbc18e41e6.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -48,11 +49,11 @@
 		</div>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img alt="..." class="d-block w-100" src="" >
+				<img alt="..." class="d-block w-100" src="home-bg.jpg" >
 				<div class="carousel-caption d-none d-md-block">
 					<h5>CREATING A BETTER YOU</h5>
 					<p>Professional Training and Coaching</p>
-					<p><a class="btn btn-info mt-3" href="#">Learn More</a></p>
+					<p><a class="btn btn-info mt-3" href="Signup">Signup</a></p>
 				</div>
 			</div>
 			<div class="carousel-item">
@@ -60,7 +61,7 @@
 				<div class="carousel-caption">
 					<h5>Training and Coaching Community</h5>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
-					<p><a class="btn btn-info mt-3" href="#">Learn More</a></p>
+					<p><a class="btn btn-info mt-3" href="Signup">Register for Free</a></p>
 				</div>
 			</div>
 			<div class="carousel-item">
@@ -68,7 +69,7 @@
 				<div class="carousel-caption">
 					<h5>Bulid Your Connection</h5>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
-					<p><a class="btn btn-info mt-3" href="#">Learn More</a></p>
+					<p><a class="btn btn-info mt-3" href="Signup">Register for Free</a></p>
 				</div>
 			</div>
 		</div><button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleIndicators" type="button"><span aria-hidden="true" class="carousel-control-prev-icon"></span> <span class="visually-hidden">Previous</span></button> <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleIndicators" type="button"><span aria-hidden="true" class="carousel-control-next-icon"></span> <span class="visually-hidden">Next</span></button>
@@ -231,6 +232,29 @@
 			</div>
 		</div>
 	</section><!-- team ends -->
+	   <!-- Sign up form start -->
+	   <div class="container">
+        <h1 class="my-5 head" > Newsletter Signup!</h1>
+        
+        <form method="post" action="/Signup">
+        <div class="form-floating mb-3">
+            <i class="icon fa-solid fa-user-tie fa-lg"></i>
+            <input type="text" class="form-control" id="floatingName" name="user" placeholder="Name" required>
+            <label for="floatingName">Name</label>
+        </div>
+        <div class="form-floating mb-3">
+            <i class="icon fa-solid fa-envelope fa-lg"></i>
+            <input type="email" class="form-control" id="floatingEmail" name="address" placeholder="email" required>
+            <label for="floatingEmail">Email</label>
+        </div>
+        <div class="form-floating mb-3">
+            <i class="icon fa-solid fa-phone fa-lg"></i>
+            <input type="tel" class="form-control" id="floatingTel" name="contact" placeholder="phone" required>
+            <label for="floatingTel">Phone no:</label>
+        </div>
+             <button type="submit" class="btn btn-primary mb-5">Submit</button>
+        </form>
+    </div>
 	<!-- Contact starts -->
 	<section class="contact section-padding" id="contact">
 		<div class="container mt-5 mb-5">
@@ -238,8 +262,8 @@
 				<div class="col-md-12">
 					<div class="section-header text-center pb-5">
 						<h2>Contact Us</h2>
-						<p><a href="tel:+2348061942655" > &#128222;+2348061942655</P></a>
-						<p><a href="https://www.linkedin.com/company/youcreation/"  ><i class="fa-brands fa-linkedin">  linkedin </i></a></p>
+						<p><a href="tel:+2348061942655" > &#128222;+2348061942655</a></P>
+						<p><a href="https://www.linkedin.com/company/youcreation/"  ><i class="fa-brands fa-linkedin">  linkedin </i></a>&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/_UCreation?t=HpZkAxZyjueJZRTLDgg_GQ&s=09"><i class="fa-brands fa-twitter"></i> Twitter</a></p>
 					</div>
 				</div>
 			</div>
