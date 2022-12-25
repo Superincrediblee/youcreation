@@ -81,13 +81,8 @@ app.get("/team",function(req,res){
 app.get("/services",function(req,res){
     res.render("services")
 })
-//let port = process.env.PORT;
-//if (port == null || port ==""){
- //   port == 5000;
-//}
- //app.listen(port,function(){
- //   console.log("Server has  started successful on port 3000")
-//})
-app.listen(5000,function(){
-   console.log("5000")
+const port = process.env.PORT || 8888;
+
+ app.listen(port,function(){
+    console.log("Server has  started successful on port " + port)
 })
