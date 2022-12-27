@@ -50,7 +50,11 @@
 					<div class="about-text">
 						<h2>We Provide the Best Quality<br>
 						Services Ever</h2>
-						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, labore reiciendis. Assumenda eos quod animi! Soluta nesciunt inventore dolores excepturi provident, culpa beatae tempora, explicabo corporis quibusdam corrupti. Autem, quaerat. Assumenda quo aliquam vel, nostrum explicabo ipsum dolor, ipsa perferendis porro doloribus obcaecati placeat natus iste odio est non earum?</p>
+						<p><%= aboutcontent %></p>
+						<% posts.forEach(function(post){ %>
+							<h2><%= post.title%></h2>  
+							<p> <%=post.content  %></p> 
+						<% }) %>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi fuga officia placeat harum, nam amet laborum repudiandae accusantium cumque maiores tempora nemo nihil! Quia, magni pariatur! Laudantium distinctio modi a!</p>
 					</div>
 				</div>
